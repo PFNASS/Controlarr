@@ -4,7 +4,7 @@ import (
 	// "fmt"
 	"net/http"
 
-	cfg "github.com/PFNASS/go-arrs/pkg/config"
+	cfg "github.com/PFNASS/Controlarr/pkg/config"
 )
 
 type RadarrConfig struct {
@@ -16,6 +16,6 @@ type RadarrConfig struct {
 
 type RadarrClient struct {
 	httpClient		*http.Client
-	Config			*RadarrConfig
+	Config			*cfg
 	BaseURL			string
 }

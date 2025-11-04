@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/wailsapp/wails/v3/pkg/application"
+	"github.com/PFNASS/Controlarr/pkg/logging"
 )
 
 // Wails uses Go's `embed` package to embed the frontend files into the binary.
@@ -21,6 +22,8 @@ var assets embed.FS
 // and starts a goroutine that emits a time-based event every second. It subsequently runs the application and
 // logs any error that might occur.
 func main() {
+
+	InitLogger, err := config.LoadConfig()
 
 	// Create a new Wails application by providing the necessary options.
 	// Variables 'Name' and 'Description' are for application metadata.
